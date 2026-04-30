@@ -84,7 +84,6 @@ defmodule Lux.DataAggregation.DataStore do
   """
   def store_transaction(chain, tx, block_number) do
     tx_hash = tx["hash"]
-    return_nil when is_nil(tx_hash) -> :ok
 
     tx_data = %{
       chain: chain,
